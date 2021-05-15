@@ -1,0 +1,32 @@
+En Rest une ressource = URI
+
+exemples:
+
+
+http://localhost:4200/users (GET/POST)
+=> GET: liste des utilisateurs
+=> POST: ajoute un utilisateurs
+
+
+http://localhost:4200/users/1 (GET/PUT/PATCH/DELETE)
+=> GET: Affiche 1 utilisateur (detail)
+=> PUT/PATCH: Modification 1 utilisateur
+=> DELETE: Supprime 1 utilisateur
+
+/*** Limite du rest ***/
+http://localhost:4200/user/1/posts/1/comments/1
+http://localhost:4200/user?active=1 
+/*** ***/
+
+Verb HTTP:
+
+- PUT: Modification totale (remplacement) d'une ressource
+- POST: Créer une ressource
+- GET: Lire une ressource
+- DELETE: Supprimer une ressource
+- PATCH: Modification partielle
+- HEAD: Identique à GET mais sans le corps de la réponse
+- OPTION: Capacité du serveur (accès lecture ou écriture)  
+
+- CONNECT: Connexion vers un serveur
+- TRACE: Trace du chemin effectué par une requête

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Le DOM</title>
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<h1>Le DOM</h1>
+
+		<h2 id="titre1">Titre 1</h2>
+		<h2 class="titres">Titre 2</h2>
+		<h2 class="titres">Titre 3</h2>
+
+		<button onclick="changerTheme()">Changer le theme</button>
+
+		<!-- Event c'est un objet créé automatiquement lorsque l'evenement est declenché-->
+		<input type="text" oninput="afficherSaisi(event)" />
+
+		<div id="textes">
+			<p>Lapin, Lutin</p>
+			<p style="display: none">Loutre</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ajax</title>
+	</head>
+	<body>
+		<h1>Ajax</h1>
+		<!-- exemple d'attaque CSRF triviale -->
+		<!-- <img src="http//mabanque.fr/virement?beneficiare=tiema&montant=1000" /> -->
+		<!-- protection de base: aucun changement d'état de l'application suite à une requête GET -->
+		<form action="" id="login-form">
+			<div>
+				<label for="login-username">Identifiant</label>
+				<input type="text" id="login-username" name="login[username]" />
+			</div>
+			<div>
+				<label for="login-password">Mot de passe</label>
+				<input
+					type="password"
+					id="login-password"
+					name="login[password]"
+				/>
+			</div>
+			<button>Se connecter</button>
+		</form>
+
+		<div id="main-content1"></div>
+		<div id="main-content2"></div>
+		<div id="main-content3"></div>
+		<div id="main-content4"></div>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(function () {
+				// charge en AJAX le document spécifié par l'url
+				// et l'insert via un innerHTML dans les éléments sélectionnés
+				$("#main-content1").load("article/1.html");
+				//Ici le document chargé est du HTML (en-tete HTTP "content-type")
+				// il est traité par jQuery comme une chaine de caracteres
+				$.get("article/1.html").done(function (data) {
+					$("#main-content2").html(data);
+				});
+
+				//ici le document chargé est du Json
+				// il est transformé par jQuery en objet JS
+				$.get("article/1.json").done(function (data) {
+					//parametre de la fonction $ et de la syntaxe HTML
+					// => création d'élément du DOM et
+					const $dataToHtml = $("<article>")
+						.append($("<h1>").text(data.title))
+						.append(data.body);
+
+					$("#main-content3").append($dataToHtml);
+				});
+
+				$("#login-form").submit(function (e) {
+					e.preventDefault();
+
+					$.post({
+						url: "url-pour-se-connecter",
+						data: JSON.stringify($(this).serializeArray()),
+						contentType: "text/json",
+						done: function () {
+							//traitement en cas de succes
+						},
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

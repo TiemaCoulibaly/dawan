@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: #89a6fb;
+	--secondary: #16e0bd;
+	--third: #fad02c;
+	--white: rgb(255, 255, 255);
+	--contact: #0f084b;
+}
+.divider {
+	height: 0.5rem;
+	background: linear-gradient(
+		to left,
+		var(--primary),
+		var(--third),
+		var(--secondary),
+		var(--white)
+	);
+}
+.underline {
+	border-bottom: 2px solid var(--third);
+	box-shadow: 2px 5px #00000010;
+	width: 180px;
+	padding: 15px;
+	margin: 20px auto 60px;
+}
+
+body > main h2 {
+	text-align: center;
+	margin: 30px 0 50px;
+	font-family: "Patrick Hand", cursive;
+	font-size: 30px;
+	box-shadow: 0 0 5px #7a5f4f;
+}
+main {
+	background-color: var(--white);
+	background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+/*---------------------------------------------------------------- Header -----------------*/
+body > nav ul {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--primary);
+	padding: 10px;
+	margin: 0;
+	padding: 0;
+}
+body > nav ul li {
+	list-style: none;
+	padding: 7px;
+}
+
+body > nav ul li a {
+	line-height: 30px;
+	text-decoration: none;
+	color: var(--white);
+}
+
+body > nav ul li:hover {
+	background: var(--secondary);
+	color: black;
+}
+
+body > nav h1 {
+	margin-top: 10rem;
+	text-align: center;
+	color: var(--white);
+	font-size: 40px;
+	font-family: "Source Sans Pro", sans-serif;
+	padding: 5px;
+}
+
+nav {
+	height: 60vh;
+	background-image: url("../images/laptop1.jpg");
+	background-color: rgba(1, 1, 1, 1);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+/* ------------------------------------------------Header end -------------------------------- */
+/*  ----------------- Main -------------------------------- */
+body > main section {
+	display: flex;
+	justify-content: space-around;
+}
+
+body > main section p i {
+	font-size: 40px;
+	margin-bottom: 30px;
+	color: var(--primary);
+}
+body > main section figcaption div i {
+	font-size: 15px;
+	color: var(--secondary);
+	padding: 5px;
+}
+body > main article i {
+	margin-left: 25px;
+	font-size: 25px;
+	color: var(--primary);
+	transition: transform 0.2s;
+}
+body > main article i:hover {
+	color: var(--secondary);
+
+	transform: scale(1.2);
+}
+body > main article figure img {
+	width: 300px;
+}
+body > main figcaption button {
+	width: 100px;
+	height: 35px;
+	border-radius: 6px;
+	border: 2px solid var(--primary);
+}
+
+.icon {
+	margin-bottom: 30px;
+}
+#profil-img {
+	border-radius: 1000px;
+	border: 3px solid var(--primary);
+}
+.education {
+	padding: 10px;
+	justify-content: space-around;
+}
+/* --------------Contact----------   */
+body > main section article figure figcaption {
+	background-color: var(--white);
+	margin: 0;
+	padding: 2px 0;
+	text-align: center;
+}
+body > main section article figure h2 {
+	color: var(--white);
+}
+body > main section article figure {
+	border: 3px solid var(--secondary);
+	box-shadow: 7px 7px var(--primary);
+	border-radius: 6px;
+}
+body > main section article figure:hover {
+	border: 3px solid var(--primary);
+	box-shadow: -7px -7px var(--secondary);
+}
+.contact {
+	padding: 20px;
+
+	background-color: var(--contact);
+}
+body > main figcaption div button {
+	width: 100px;
+	height: 35px;
+	border-radius: 6px;
+	border: 2px solid var(--primary);
+}
+body > main figcaption div button:hover {
+	background-color: var(--secondary);
+	color: var(var(--white));
+}
+/* --------------------------------footer-------- */
+body > footer {
+	text-align: center;
+	background-color: var(--primary);
+}

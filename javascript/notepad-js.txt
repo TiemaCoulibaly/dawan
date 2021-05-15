@@ -1,0 +1,52 @@
+Formation Javascript
+Formateur LESUEUR Yohann: ylesueur@dawan.fr
+
+Projet: https://github.com/ylesueur-dawan/javascript-22-03-2021.git
+
+Extension VScode:
+    https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
+    
+    
+Javascript est un langage dynamiquement typé (on ne precise pas les types lors de la creation).
+
+Types primitif:
+Number: nombre entier, ou à virgule
+String: chaine de caractères (lettre, un mot, une phrase)
+Boolean: vrai ou faux (true ou false);
+undefined: la valeur n'est pas définie
+null
+----
+object,
+BigInt
+Symbol
+
+
+Regles de nommage d'une variable:
+    1- Le nom d'une variable ne peut contenir que des lettres, des chiffres, des _ (underscore) et des $ 
+    2- Le nom d'une variable ne peut pas commencer par un chiffre
+    3- Les nom d'une variable ne doit pas être un mot clef
+    https://www.w3schools.com/js/js_reserved.asp
+    4- Le nom d'une variable est sensible aux majuscules: Age, age, AgE sont 3 variables différentes
+    
+Convention de nommage:
+    1- camelCase + minuscule: nomDeLaVariable
+    2- snake_case + majuscule: NOM_DE_CONSTANTE 
+    3- Toujours choisir des noms explicites pour nos variables
+    
+    
+Les types primitifs (number, string, boolean) ne sont pas modifiables
+Toutes les operations qu'on effectuent, creer une nouvelle valeur a partir de l'ancienne
+ Il faut donc soit la stockée soit l'utiliser directement
+Mais la variable "originelle" ne sera pas modifiée.
+
+Litteraux de Gabarit:
+    https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Template_literals
+
+Exercices:
+    ex1: https://github.com/ylesueur-dawan/javascript-22-03-2021/blob/master/99-exercices/js/ex1.js
+    
+Sharemycode:
+    https://sharemycode.fr
+
+
+ex: https://sharemycode.fr/cxk

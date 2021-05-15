@@ -1,0 +1,12 @@
+status code: 5
+
+100 : Information
+
+200 : Succès
+
+300 : Redirection
+
+400 : Erreur Client
+418 : I'm a teapot (HTCPCP)
+
+500 : Erreur Server 

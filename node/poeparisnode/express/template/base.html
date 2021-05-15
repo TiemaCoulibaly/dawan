@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>{% block title %}Welcome Express{% endblock %}</title>
+        <meta charset="utf-8">
+        {% block javascript %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <h1>Formation Node <small>Express</small></h1>
+        </header>
+        <nav>
+            <a href="/">Accueil</a> - 
+        </nav>
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+        <footer>
+            <p>Formation Node - POE Paris - Avril 2021 - Dawan FOAD</p>
+        </footer>
+    </body>
+</html>

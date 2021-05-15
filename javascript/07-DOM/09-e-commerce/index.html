@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exemple</title>
+		<link rel="stylesheet" href="./index.css" />
+		<script
+			src="https://kit.fontawesome.com/0841f2e01f.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#">item 1</a></li>
+					<li><a href="#">item 2</a></li>
+					<li><a href="#">item 3</a></li>
+				</ul>
+				<div class="cart" onclick="toggleSideNav()">
+					<i class="fas fa-shopping-basket"></i>
+					<span> 0 </span>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<nav class="side-nav">
+				<div class="header-nav">
+					<h2>Panier</h2>
+					<i onclick="toggleSideNav()" class="fas fa-times"></i>
+				</div>
+				<div class="items">
+					<div class="item">
+						<div class="item-img-container">
+							<img />
+						</div>
+						<p>Nom du produit</p>
+						<p>quantite</p>
+						<p>prix</p>
+						<p>
+							<i class="fas fa-trash"></i>
+						</p>
+					</div>
+					<div class="item">
+						<div class="item-img-container">
+							<img />
+						</div>
+						<p>Nom du produit</p>
+						<p>quantite</p>
+						<p>prix</p>
+						<p>
+							<i class="fas fa-trash"></i>
+						</p>
+					</div>
+				</div>
+			</nav>
+			<div class="filtres">
+				<form action="">
+					<label for="search-name">Rechercher</label>
+					<input
+						type="search"
+						name="search-name"
+						id="search-name"
+						oninput="filterByName(event)"
+					/>
+
+					<fieldset>
+						<legend>Prix</legend>
+
+						<div class="form-group-check">
+							<label for="less-50"> &lt; 50</label>
+							<input
+								type="radio"
+								id="less-50"
+								name="filtres"
+								onchange="filterProductPrice(event, 50)"
+							/>
+						</div>
+
+						<div class="form-group-check">
+							<label for="less-100"> &lt; 100</label>
+							<input
+								type="radio"
+								id="less-100"
+								name="filtres"
+								onchange="filterProductPrice(event, 100)"
+							/>
+						</div>
+
+						<div class="form-group-check">
+							<label for="less-300"> &lt; 300</label>
+							<input
+								type="radio"
+								id="less-300"
+								name="filtres"
+								onchange="filterProductPrice(event, 300)"
+							/>
+						</div>
+
+						<div class="form-group-check">
+							<label for="less-500"> &lt; 500</label>
+							<input
+								type="radio"
+								id="less-500"
+								name="filtres"
+								onchange="filterProductPrice(event, 500)"
+							/>
+						</div>
+
+						<div class="form-group-check">
+							<label for="less-800"> &lt; 800</label>
+							<input
+								type="radio"
+								id="less-800"
+								name="filtres"
+								onchange="filterProductPrice(event, 800)"
+							/>
+						</div>
+					</fieldset>
+					<input type="submit" />
+				</form>
+			</div>
+			<div class="cards">
+				<div class="card">
+					<h2>Nom</h2>
+					<p>Prix</p>
+					<div class="more-infos">
+						<p>
+							Voluptate non commodo quis cupidatat reprehenderit
+							non exercitation incididunt amet.
+						</p>
+						<i class="fas fa-cart-plus"></i>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

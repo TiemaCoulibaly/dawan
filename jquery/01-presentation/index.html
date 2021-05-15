@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Présentation</title>
+	</head>
+	<body>
+		<h1>Présentation</h1>
+		<h2>Hello world</h2>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			//$function(){..}) raccourci vers:
+			//$(document).ready(function(){...})
+			// exécute la fonction "callback" une fois le document chagé
+			//
+			$(function () {
+				//$(<string>) : construit une collection d'éléments jQuery autour d'un sélecteur
+				//=> pas besoin de faire les parcours avec for ..of
+				$("h1")
+					//.css(<maping>): applique l'ensemble des couples propritété de styles à chacun des élements de la collection
+					.css({ backgroundColor: "aliceblue" });
+			});
+		</script>
+	</body>
+</html>

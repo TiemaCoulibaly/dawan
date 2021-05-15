@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Accueil :: Formation Node Express{% endblock %}
+
+{% block body %}
+
+<h2>Accueil</h2>
+<img src="/images/node-single-event-loop.jpg" alt="node single event loop" />
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo recusandae animi magnam voluptate culpa quisquam eveniet ut tenetur pariatur! Recusandae quam nulla dolor rerum repellendus maiores, nihil eligendi quibusdam explicabo?</p>
+
+<ul>
+{% for user in users %}
+    <li>{{ user.firstname }} {{ user.lastname }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

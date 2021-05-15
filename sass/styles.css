@@ -1,0 +1,41 @@
+article {
+  background-color: yellow;
+}
+
+article p {
+  display: inline-block;
+  width: 50ch;
+  background-color: red;
+  margin: 1 em 0;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+.menu-bar {
+  background-color: #123;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-bar a {
+  background-color: #4d88c4;
+  display: block;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.menu-bar a:hover {
+  background-color: #bfd5ea;
+}
+
+body.firefox #main a {
+  font-weight: normal;
+}
+/*# sourceMappingURL=styles.css.map */

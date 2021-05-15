@@ -1,0 +1,8 @@
+# build an generated files
+dist/
+
+
+#lib and other depencies
+node_modules/
+
+src/vendors

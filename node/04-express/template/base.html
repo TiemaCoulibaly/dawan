@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{%block title%}Welcome Express{%endblock%}</title>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<header>
+			<h1>Formation Node <small>Express</small></h1>
+		</header>
+		<nav>
+			<a href="/">Accueil</a> --
+			<a href="/about/about">About</a>
+		</nav>
+		<main>{%block body%}{%endblock%}</main>
+		<footer>Formation Node - POE - Front-end - Dawan</footer>
+	</body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		header {
+			background-color: #89a6fb;
+			padding: 10px;
+			text-align: center;
+		}
+		h1 {
+			color: white;
+		}
+		nav {
+			text-align: center;
+			margin: 20px;
+		}
+		a {
+			list-style-type: none;
+			text-decoration: none;
+			font-size: 25px;
+			padding: 5px;
+			background-color: #78C3FB;
+			border-radius: 10px;
+			
+		}
+		a:hover {
+			background-color: #89a6fb;
+			border-radius: 10px;
+		}
+	</style>
+</html>

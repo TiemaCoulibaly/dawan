@@ -1,0 +1,43 @@
+$inverse-background: black;
+$brand-color: #123;
+
+article {
+	background-color: yellow;
+	p {
+		display: inline-block;
+		width: 50ch;
+		background-color: red;
+		margin: 1 em 0;
+	}
+}
+
+h1 {
+	background-color: $inverse-background;
+	color: white;
+}
+
+.menu-bar {
+	background-color: $brand-color;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	a {
+		background-color: lighten($brand-color, 40%);
+		display: block;
+		padding: 0.5em;
+		text-decoration: none;
+		&:hover {
+			background-color: lighten($brand-color, 70%);
+		}
+	}
+}
+
+#main {
+	a {
+		body.firefox & {
+			//body.firefox #main article
+			font-weight: normal;
+		}
+	}
+}

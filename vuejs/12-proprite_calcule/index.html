@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <script src="../vue.global.js"></script> -->
+
+		<script src="https://unpkg.com/vue@next"></script>
+		<script type="module" src="./app.js	" defer></script>
+
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+	</head>
+	<body>
+		<div id="app">
+			<h1>Propiete Calcule</h1>
+			<p>Message: {{ message }}</p>
+			<p>Inversé: {{ reverseMessage() }}</p>
+			<p>Calcléé: {{ reverseMessageComputed }}</p>
+
+			<p>Titre: {{titre}}</p>
+			<input type="text" v-model="message" />
+			<input type="text" v-model="rienAvoir" />
+			<input type="text" v-model="titre" placeholder="titre" />
+		</div>
+	</body>
+</html>

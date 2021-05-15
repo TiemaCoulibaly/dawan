@@ -1,0 +1,1 @@
+(()=>{var e={555:()=>{}},t={};function r(n){var o=t[n];if(void 0!==o)return o.exports;var u=t[n]={exports:{}};return e[n](u,u.exports,r),u.exports}(()=>{"use strict";r(555),document.addEventListener("DOMContentLoaded",(()=>{const e=function(e="world"){return`Hello ${e}`}("John Doe");document.querySelector("#target").innerText=e}))})()})();

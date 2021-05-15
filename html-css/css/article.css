@@ -1,0 +1,309 @@
+p {
+	padding: 5px;
+}
+
+.container {
+	max-width: 100%;
+}
+
+.hover {
+	transition: transform 1s, box-shadow 1s ease 1s;
+}
+
+.hover:hover {
+	transform: scale(1.2);
+	box-shadow: 0 0 50px #333;
+	border-radius: 5px;
+}
+
+.rotate {
+	transition: transform 1s;
+	transform-origin: 10pc;
+}
+
+.rotate:hover {
+	transform: rotate(360deg);
+}
+
+.translate {
+	transition: transform 0.5s;
+}
+
+.translate:hover {
+	transform: translate(30px, -20px);
+}
+
+.animate {
+	position: absolute;
+	animation: monAnim 3s infinite;
+}
+
+.rectangle {
+	width: 200px;
+	height: 100px;
+	background-color: darkred;
+	opacity: 0.5;
+}
+
+@keyframes monAnim {
+	0% {
+		transform: rotate(0deg);
+		left: 0;
+	}
+	5% {
+		transform: rotate(45deg);
+		left: 0;
+	}
+	50% {
+		left: 80vw;
+		transform: rotate(45deg);
+	}
+	55% {
+		left: 80vw;
+		transform: rotate(0deg);
+	}
+	60% {
+		left: 80vw;
+		transform: rotate(0deg);
+	}
+	100% {
+		left: 0;
+	}
+}
+
+body > main section article {
+	width: calc(100% - 10px);
+	display: block;
+	border: none;
+}
+
+body > main section article main {
+	overflow: none;
+}
+
+body > main section {
+	display: block;
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+p.submitButton {
+	padding: 0;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.formulaire fieldset {
+	border: 1px solid var(--rouge);
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.formulaire p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.formulaire legend {
+	color: white;
+	background-color: var(--rouge);
+	font-weight: bold;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.formulaire label {
+	width: 100%;
+	line-height: 1.5rem;
+}
+
+.formulaire input,
+.formulaire textarea,
+.formulaire select {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	line-height: 1.5rem;
+	border-radius: 2px;
+	padding-left: 5px;
+}
+
+.formulaire input[type="range"] {
+	width: 85%;
+}
+
+.formulaire input[type="color"] {
+	width: 1.5rem;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+/*
+.formulaire input[type=number]{
+    -moz-appearance: textfield;
+}
+*/
+.showRange {
+	width: 10%;
+	text-align: right;
+}
+
+p.grpCB {
+	justify-content: center;
+}
+
+p.grpCB label {
+	width: 60%;
+}
+
+p.grpCB input {
+	width: 20%;
+	text-align: left;
+}
+table {
+	border-collapse: collapse;
+}
+
+td,
+th {
+	border: 1px solid #333;
+}
+
+#badge {
+	width: 338px;
+	height: 338px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.imgBckG {
+	width: 338px;
+	height: 338px;
+	background: url(../images/superposition/logo-pt1.png) no-repeat;
+	z-index: 3;
+	position: absolute;
+}
+
+.imgMG {
+	width: 338px;
+	height: 338px;
+	background: url(../images/superposition/logo-pt2.png) no-repeat;
+	z-index: 4;
+	position: absolute;
+}
+
+.imgFG {
+	width: 338px;
+	height: 338px;
+	background: url(../images/superposition/logo-pt3.png) no-repeat;
+	z-index: 5;
+	position: absolute;
+}
+.vignette {
+	width: 50px;
+	height: 50px;
+	background: url(../images/multi-vignettes.png) no-repeat;
+	margin: 2px;
+	border: 1px solid var(--rouge);
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.vignette-01 {
+	background-position: left 0px top 0px;
+}
+
+.vignette-02 {
+	background-position: left -50px top 0px;
+}
+
+.vignette-03 {
+	background-position: left 0px top -50px;
+}
+
+.vignette-04 {
+	background-position: left -50px top -50px;
+}
+.redTriangle {
+	display: inline-block;
+	height: 0px;
+	width: 0px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 10px solid var(--rouge);
+}
+.big-box {
+	height: 250px;
+	width: 250px;
+	border: 1px solid black;
+}
+.div-rouge {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background-color: red;
+}
+.div-verte {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background-color: green;
+}
+/* media queris responsive article */
+@media (min-width: 576px) {
+	.formulaire label {
+		width: 30%;
+	}
+
+	.formulaire input,
+	.formulaire textarea,
+	.formulaire select {
+		width: 65%;
+	}
+
+	.formulaire input[type="range"] {
+		width: 50%;
+	}
+}
+
+@media (min-width: 768px) {
+	figure,
+	img {
+		max-height: unset;
+	}
+
+	figure {
+		width: 30%;
+	}
+
+	.left {
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 1rem;
+	}
+
+	.right {
+		float: right;
+		margin-left: 5px;
+		margin-bottom: 1rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.formulaire fieldset,
+	.submitButton {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p.submitButton {
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

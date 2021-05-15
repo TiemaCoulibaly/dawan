@@ -1,0 +1,8 @@
+.active {
+	color: coral;
+	background-color: cornflowerblue;
+}
+.txt-error {
+	color: red;
+	font-weight: bold;
+}

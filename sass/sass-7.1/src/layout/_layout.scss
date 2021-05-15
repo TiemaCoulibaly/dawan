@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+
+  & > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+}
+.header {
+  background: tomato;
+}
+
+.aside {
+  @include mq($from: small) {
+    flex: 1 0 0;
+  }
+}
+
+.main {
+  @include mq($from: medium) {
+    flex: 3 0px;
+    order: 2;
+  }
+  background: deepskyblue;
+}
+
+.aside-1 {
+  @include mq($from: medium) {
+    order: 1;
+  }
+  background: gold;
+}
+
+.aside-2 {
+  @include mq($from: medium) {
+    order: 3;
+  }
+  background: hotpink;
+}
+
+.footer {
+  @include mq($from: medium) {
+    order: 4;
+  }
+  background: lightgreen;
+}

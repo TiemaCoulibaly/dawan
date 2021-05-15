@@ -1,0 +1,283 @@
+/*
+    dimension web : 
+    px      => pixel
+    em      => cadratin  : se calcul par rapport au em du conteneur
+    %       => pourcentage : calculé selon la taille du conteneur
+    vw vh   => view width & view height
+    rem     => cadratin racine : se calcul par rapport à la racine du user stylesheet
+*/
+
+/* déclarations variables couleurs et tailles */
+:root {
+	--rouge: #98838f;
+	--header-color: white;
+	--smartPhoneP: ;
+}
+
+/* polices "importées" */
+@font-face {
+	font-family: "MaskedHero";
+	src: url("fonts/MaskedHero.eot");
+	src: url("fonts/MaskedHero.eot") format("embedded-opentype"),
+		url("fonts/MaskedHero.woff2") format("woff2"),
+		url("fonts/MaskedHero.woff") format("woff"),
+		url("fonts/MaskedHero.ttf") format("truetype"),
+		url("fonts/MaskedHero.svg#MaskedHero") format("svg");
+}
+
+/* déclarations générales */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1 {
+	color: var(--header-color);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--rouge);
+	text-align: center;
+}
+
+p {
+	text-align: justify;
+}
+
+button {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid var(--rouge);
+	color: var(--rouge);
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: var(--rouge);
+	color: white;
+}
+
+img,
+video {
+	max-width: 100%;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.cem {
+	font-size: 2em;
+}
+
+.crem {
+	font-size: 2rem;
+}
+
+.rouge-gras {
+	color: var(--rouge);
+	font-weight: bold;
+}
+
+/* déclarations maquette html */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+
+	margin: 0;
+}
+
+body > header {
+	background-color: var(--rouge);
+}
+
+body > header h1 {
+	font-family: "MaskedHero";
+	margin: 0;
+	padding-top: 0.67rem;
+	padding-bottom: 0.67rem;
+}
+
+.toggle-menu {
+	color: white;
+	margin-left: 5vw;
+}
+
+.active {
+	display: block;
+}
+
+body > nav {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--rouge);
+}
+
+body > nav ul {
+	display: none;
+	list-style: none;
+	padding: 0;
+	background-color: var(--rouge);
+	margin: 0;
+}
+
+body > nav ul li a {
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	background: var(--rouge);
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+body > nav ul li a:hover {
+	background: white;
+	color: var(--rouge);
+}
+
+body > main section article {
+	border: 1px solid rgba(0, 0, 139, 0.5);
+	margin: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+}
+
+body > main section article main iframe,
+body > main section article main audio {
+	max-width: 100%;
+}
+
+body > main section article main figure {
+	margin: 0;
+	max-width: 100%;
+	background-color: rgba(0, 0, 139, 0.5);
+}
+
+body > main section article main figure figcaption {
+	margin: 0;
+	font-size: 0.9rem;
+	text-align: center;
+	padding: 2px 0;
+}
+
+body > main section article footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+body > footer {
+	background-color: var(--rouge);
+}
+
+body > footer ul {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+body > footer ul li a,
+body > footer ul li a:visited {
+	color: white;
+	text-decoration: none;
+	display: block;
+	line-height: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+body > footer ul li a:hover {
+	color: var(--rouge);
+	background-color: white;
+}
+
+/* media querie */
+
+@media screen and (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+
+	.toggle-menu {
+		display: none;
+	}
+
+	body > nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	body > nav ul li a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	body > main > section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	body > main section article {
+		width: calc(50% - 10px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	body > main section article main {
+		overflow: hidden;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+
+	body > footer {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	body > footer ul {
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+
+	body > main section article {
+		width: 23%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.container {
+		max-width: 1540px;
+	}
+}

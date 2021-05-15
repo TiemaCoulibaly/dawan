@@ -1,0 +1,13 @@
+#display {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+ul > li {
+	text-align: center;
+	text-decoration: none;
+	list-style: none;
+}
+h2 {
+	text-align: center;
+}

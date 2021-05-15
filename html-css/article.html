@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formation webmaster HTML CSS RWD</title>
+
+		<link rel="stylesheet" href="./css/style.css" media="screen" />
+		<link rel="stylesheet" href="./css/article.css" media="screen" />
+		<link rel="stylesheet" href="./css/print.css" media="print" />
+	</head>
+	<body>
+		<header>
+			<h1>Formation webmaster RWD - <small>HTML5 / CSS3</small></h1>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="./index.html" title="Retourner à l'accueil du site"
+						>Intro</a
+					>
+				</li>
+				<li><a href="./article.html">Article</a></li>
+				<li><a href="./formulaire.html">Formulaire</a></li>
+				<li><a href="./index.html">Intro</a></li>
+				<li><a href="./index.html">Intro</a></li>
+				<li><a href="./index.html">Intro</a></li>
+				<li><a href="./index.html">Intro</a></li>
+			</ul>
+		</nav>
+		<main class="container">
+			<section>
+				<article>
+					<header>
+						<h2>CSS particulier à une page et Animations CSS</h2>
+					</header>
+					<main>
+						<p>
+							IL est possible de réutiliser la quasi-totalité d'un
+							CSS existant pour une page avec un affichage de
+							contenu légèrement différent, par exemple cette page
+							qui affiche un seul article utilise un CSS
+							supplémentaire qui ne surcharge que quelques règles
+							pour adapter le style de l'article.
+						</p>
+						<figure class="left">
+							<img
+								src="./images/spider-verse-group-pic.jpg"
+								class="hover"
+							/>
+						</figure>
+						<h2>Animations en CSS</h2>
+						<p class="hover">
+							Pour utiliser les transitions il faut tout d'abord
+							spécifier sur une classe la propriété transition, il
+							faut définir dans cette propriété les différentes
+							propriétés CSS qui utiliseront une transition.
+							Ensuite par exemple sur la pseudo classe hover liée
+							à la classe précédente, je décris les styles des
+							transformations.
+						</p>
+						<h3>transition, scale</h3>
+						<p>
+							Scale() sert à augmenter la taille à l'échèle d'un
+							élément, cela augmente tout, c'est à dire l'élément
+							et son contenu.
+						</p>
+						<h2>Transition, rotate</h2>
+						<p>
+							Rotate fait effectuer à l'élément une rotation, on
+							peut choisir le point pivot de l'élément.
+						</p>
+						<figure class="right">
+							<img
+								class="rotate"
+								src="./images/spider_man_spider_verse_saut_de_foi.jpg"
+							/>
+							<figcaption>
+								Le saut de la foi de Miles Morales
+							</figcaption>
+						</figure>
+						<h2>Transition, Translate</h2>
+						<p>
+							Translate fait effectuer à l'élément une translation
+							dans une direction donnée.
+						</p>
+						<div class="rectangle animate"></div>
+						<h2>Animation, animate</h2>
+						<p>
+							Animate permet de créer des animations sur des
+							éléments. On peut définir des images clefs
+							(keyframe) sur un pourcentage de la durée totale de
+							l'animation, à chaque keyframe on définir l'état ou
+							les style de l'élément à cette keyframe.
+						</p>
+						<figure class="left">
+							<img
+								class="translate"
+								src="./images/spider_man_into_the_spider_verse.jpg"
+							/>
+						</figure>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing
+							elit. Amet debitis assumenda illo fugit quaerat
+							alias quas quidem a, vero dicta! Accusamus totam
+							rerum ullam odio obcaecati dignissimos enim delectus
+							quia!
+						</p>
+						<table>
+							<caption>
+								Mon tableau html
+							</caption>
+							<thead>
+								<tr>
+									<th>c1</th>
+									<th>c2</th>
+									<th>c3</th>
+									<th>c4</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="2">1-1</td>
+									<td>2-1</td>
+									<td>3-1</td>
+								</tr>
+								<tr>
+									<td rowspan="2">1-2</td>
+									<td>2-2</td>
+									<td colspan="2" rowspan="2">3-2</td>
+								</tr>
+								<tr>
+									<td>1-3</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>p1</th>
+									<th>p2</th>
+									<th>p3</th>
+									<th>p4</th>
+								</tr>
+							</tfoot>
+						</table>
+					</main>
+					<footer>
+						<a href="./index.html">
+							<button>retour à l'accueil</button>
+						</a>
+					</footer>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<ul>
+				<li><a href="#">&copy;Dawan 2021</a></li>
+				<li><a href="#">Conditions Générale d'Utilisation</a></li>
+				<li><a href="#">Qui sommes-nous</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

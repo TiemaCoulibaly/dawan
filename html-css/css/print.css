@@ -1,0 +1,27 @@
+/* css pour imprimer donc enlever les choses indispensable */
+body > header,
+body > nav,
+body > footer,
+video,
+source,
+iframe,
+button {
+	display: none;
+}
+
+body > main > section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+body > main section article {
+	width: calc(50% - 10px);
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0px 90px;
+}
+
+body > main img {
+	width: 100%;
+	height: 100%;
+}

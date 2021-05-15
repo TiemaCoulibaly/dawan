@@ -1,0 +1,21 @@
+Structured Query Language
+
+-Conception
+
+Créer une base de donnée: CREATE DATABASE nom_bdd
+Créer des tables: CREATE TABLE nom_table(
+  champs_1 type_donnee,
+  champs_2 type_donnee options,
+)
+
+type_donnee (VARCHAR, TEXT, BLOB, INTEGER, DOUBLE, BOOLEAN(TinyInt(1)), DATE, TIME, DATETIME, ENUM)
+options (NULL, NOT NULL, AUTO_INCREMENT, DEFAULT(), INDEX, PRIMARY KEY, UNIQUE, FOREIGN KEY)
+
+
+-Lecture/Ecriture
+
+insertion: INSERT INTO table (champs, champs, champs) VALUE (value, value, value)
+modification: UPDATE table SET champs=value, champs=value, champs=value WHERE champs=value
+suppression: DELETE FROM table WHERE champs=value
+extraction: SELECT champs, champs, champs, champs FROM table champs>value AND/OR champs<value
+        ORDER BY champs DESC/ASC LIMIT value,value

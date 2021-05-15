@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Javascript</title>
+		<!-- Attend que la page est finie de chargée avant d'executer le script -->
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<h1>Les événements</h1>
+
+		<button onclick="direBonjour()">Dire bonjour</button>
+
+		<!-- Event c'est un objet créé automatiquement lorsque l'evenement est declenché-->
+		<input type="text" oninput="afficherSaisi(event)" />
+
+		<form onsubmit="login(event)">
+			<fieldset>
+				<legend>Connexion</legend>
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" />
+
+				<label for="password">Mot de passe</label>
+				<input type="password" name="mdp" id="password" />
+
+				<input type="submit" value="Se connecter" />
+			</fieldset>
+		</form>
+
+		<button id="hello">Hello !</button>
+	</body>
+</html>

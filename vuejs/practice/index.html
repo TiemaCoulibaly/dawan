@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <script src="../vue.global.js"></script> -->
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="https://unpkg.com/vue@next"></script>
+		<script type="module" src="./app.js	" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{message}}</h1>
+			<input type="text" v-model="user" />
+			<button @click="ajouterList()">Ajouter</button>
+			<ul v-for="list in lists">
+				<li>{{list}}</li>
+			</ul>
+
+			<div id="display">
+				<div v-for="produit in produits">
+					<p>{{ produit }}</p>
+					<button v-on:click="commander(produit)">Commander</button>
+				</div>
+			</div>
+			<h2 v-if="commandes.length > 0">Produit Commandé</h2>
+			<ul>
+				<li v-for="commande in commandes">{{commande}}</li>
+			</ul>
+
+			<p v-for="todo in todos" :key="todo.id">{{todo.content}}</p>
+			<p v-for="tab in tabs">{{tab}}</p>
+			<button @click="inverser()">INverser</button>
+		</div>
+	</body>
+</html>

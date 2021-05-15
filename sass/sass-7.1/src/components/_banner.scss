@@ -1,0 +1,23 @@
+$bannerColor: #98838f;
+$primary: #78c3fb;
+$secondary: #89a6fb;
+$white: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1597589827703-f4b68eafa0ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fHByb2dyYW1taW5nfGVufDB8MHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+
+  background-color: rgba(1, 1, 1, 1);
+  height: 50vh;
+
+  h1 {
+    padding-top: 15vh;
+    text-align: center;
+    color: $primary;
+    text-shadow: 2px 2px 2px $white;
+    font-size: 60px;
+  }
+}

@@ -1,0 +1,12 @@
+.navbar {
+	@extend .navbar-expand-md;
+	& > ul {
+		@extend .navbar-nav;
+	}
+	nav > ul {
+		@extend .navbar-nav;
+		& > li > a {
+			@extend .nav-link;
+		}
+	}
+}

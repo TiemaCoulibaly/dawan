@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://unpkg.com/vue@next"></script>
+		<script type="module" src="./app.js	" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>Liaison d'évenement Exercises</h1>
+			<p v-if="imgUrl == '' ">Aucune Image Dispo</p>
+			<img v-else :src="imgUrl" alt="" />
+
+			<button @click="changeImage(1)">Chien</button>
+			<button @click="changeImage(2)">Chat</button>
+			<button @click="changeImage(3)">Lapin</button>
+		</div>
+	</body>
+</html>

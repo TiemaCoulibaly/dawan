@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formation webmaster HTML CSS RWD</title>
+
+		<link rel="stylesheet" href="./css/style.css" media="screen" />
+		<link rel="stylesheet" href="./css/article.css" media="screen" />
+		<link rel="stylesheet" href="./css/print.css" media="print" />
+		<script>
+			function loaded(callable) {
+				document.addEventListener("DOMContentLoaded", callable);
+			}
+
+			function $(selector) {
+				return document.querySelector(selector);
+			}
+
+			function $$(selector) {
+				return document.querySelectorAll(selector);
+			}
+
+			loaded(function () {
+				$("#niveauAnglais").addEventListener("change", function () {
+					let varNiveauAng = $("#niveauAnglais").value;
+					//console.log(varNiveauAng);
+					$("#rangeAnglais").innerHTML = varNiveauAng;
+				});
+
+				$$("p").forEach(function (p) {
+					p.addEventListener("click", function () {
+						//console.log(this.innerHTML)
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>Formation webmaster RWD - <small>HTML5 / CSS3</small></h1>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="./index.html" title="Retourner à l'accueil du site"
+						>Intro</a
+					>
+				</li>
+				<li><a href="./article.html">Article</a></li>
+				<li><a href="./formulaire.html">Formulaire</a></li>
+				<li><a href="./index.html">Intro</a></li>
+				<li><a href="./index.html">Intro</a></li>
+				<li><a href="./index.html">Intro</a></li>
+				<li><a href="./index.html">Intro</a></li>
+			</ul>
+		</nav>
+		<main class="container">
+			<h2>Les formulaires</h2>
+			<section>
+				<article>
+					<header>
+						<h2>Élément de formulaires</h2>
+					</header>
+					<main>
+						<p>
+							Les formulaire servent a recueillir des
+							informations.
+						</p>
+						<h3>
+							Exemple de formulaire et d'éléments de formulaire
+						</h3>
+						<p>
+							Un formulaire se déclare à l'aide de la balise form.
+							Il possède des attributs.<br />
+							Les plus importants sont action et method.
+						</p>
+						<h3>Action</h3>
+						<p>
+							Cible la page de traitement du formulaire. Si action
+							n'est pas défini, les données sont envoyées sur la
+							même page (mais il y a un rechargement).
+						</p>
+						<h3>method</h3>
+						<p>
+							Méthode d'envoi des information du formulaire. Il y
+							en a deux : get et post
+						</p>
+						<ul>
+							<li>
+								Get : les données sont envoyées en variable dans
+								l'url de la page de traitement
+							</li>
+							<li>
+								Post : les données sont envoyées en variable
+								dans l'entête http.
+							</li>
+						</ul>
+						<form method="get" class="formulaire">
+							<p>Saisie du formulaire</p>
+							<fieldset>
+								<legend>Vos coordonnées</legend>
+								<p>
+									<label for="nom">Nom</label>
+									<input
+										type="text"
+										name="nom"
+										id="nom"
+										placeholder="Entrez votre nom"
+										autofocus
+										required
+									/>
+								</p>
+								<p>
+									<label for="prenom">Prénom</label>
+									<input
+										type="text"
+										name="prenom"
+										id="prenom"
+										placeholder="Entrez votre prénom"
+									/>
+								</p>
+								<p>
+									<label for="email">E-mail</label>
+									<input
+										type="email"
+										name="email"
+										id="email"
+										placeholder="Entrez votre e-mail"
+										required
+									/>
+								</p>
+								<p>
+									<label for="website">Votre site web</label>
+									<input
+										type="url"
+										name="website"
+										id="website"
+										placeholder="Adresse de votre site"
+									/>
+								</p>
+								<p>
+									<label for="telephone">N° téléphone</label>
+									<input
+										type="tel"
+										name="telephone"
+										id="telephone"
+										placeholder="N° téléphone"
+									/>
+								</p>
+							</fieldset>
+							<fieldset>
+								<legend>Votre vie personnelle</legend>
+								<p>
+									<label for="description"
+										>Décrivez-vous</label
+									>
+									<textarea
+										name="description"
+										id="description"
+										placeholder="Votre description ici..."
+										rows="5"
+									></textarea>
+								</p>
+								<p>
+									<label for="fratrie"
+										>Nombre de frère(s) et soeur(s)</label
+									>
+									<input
+										type="number"
+										name="fratrie"
+										id="fratrie"
+										min="0"
+										max="20"
+										step="1"
+										value="0"
+									/>
+								</p>
+								<p>
+									<label for="niveauAnglais"
+										>Nombre de frère(s) et soeur(s)</label
+									>
+									<input
+										type="range"
+										name="niveauAnglais"
+										id="niveauAnglais"
+										min="0"
+										max="20"
+										step="0.5"
+										value="10"
+									/>
+									<span id="rangeAnglais" class="showRange"
+										>10</span
+									>
+								</p>
+							</fieldset>
+							<fieldset>
+								<legend>Votre équipe</legend>
+								<p>
+									<label for="couleurEquipe"
+										>Couleur de votre équipe</label
+									>
+									<input
+										type="color"
+										name="couleurEquipe"
+										id="couleurEquipe"
+									/>
+								</p>
+								<p>
+									<label for="dateEquipe"
+										>Date création équipe</label
+									>
+									<input
+										type="date"
+										name="dateEquipe"
+										id="dateEquipe"
+									/>
+								</p>
+								<p>
+									<label for="chercheEquipe"
+										>Vérifier le nom de l'équipe</label
+									>
+									<input
+										type="search"
+										name="chercheEquipe"
+										id="chercheEquipe"
+									/>
+								</p>
+								<p>
+									Cochez les capacités de votre
+									équipe(plusieurs choix possible)
+								</p>
+								<p class="grpCB">
+									<input
+										type="checkbox"
+										name="agilite"
+										id="agilite"
+									/>
+									<label for="agilite">Agilité</label>
+									<input
+										type="checkbox"
+										name="force"
+										id="force"
+									/>
+									<label for="force">Force</label>
+									<input
+										type="checkbox"
+										name="sagesse"
+										id="sagesse"
+									/>
+									<label for="sagesse">Sagesse</label>
+									<input
+										type="checkbox"
+										name="intelligence"
+										id="intelligence"
+									/>
+									<label for="intelligence"
+										>Intelligence</label
+									>
+								</p>
+								<p>Veuillez indique votre tranche d'âge :</p>
+								<p class="grpCB">
+									<input
+										type="radio"
+										name="age"
+										id="moins15"
+										value="moins15"
+										checked
+									/>
+									<label for="moins15">Moins de 15 ans</label>
+									<input
+										type="radio"
+										name="age"
+										id="medium15-25"
+										value="medium15-25"
+									/>
+									<label for="moins15">15 - 25 ans</label>
+									<input
+										type="radio"
+										name="age"
+										id="medium26-40"
+										value="medium26-40"
+									/>
+									<label for="moins15">26 - 40 ans</label>
+									<input
+										type="radio"
+										name="age"
+										id="plus40"
+										value="plus40"
+									/>
+									<label for="plus40">Plus de 40 ans</label>
+								</p>
+								<label for="specialite"
+									>Spécialisation de l'équipe</label
+								>
+								<select name="specialite" id="specialite">
+									<option value="" selected>
+										Choisir une spécialité
+									</option>
+									<optgroup label="Discrétion">
+										<option value="infiltration">
+											Infiltration
+										</option>
+										<option value="exfiltration">
+											Exfiltration
+										</option>
+									</optgroup>
+									<optgroup label="Force">
+										<option value="raid">Raid</option>
+									</optgroup>
+									<optgroup label="Intelligence">
+										<option value="securite">
+											Sécurité
+										</option>
+									</optgroup>
+								</select>
+							</fieldset>
+							<p class="submitButton">
+								<!-- <input type="submit" name="subOK" value="Envoyer" />-->
+								<button
+									name="subOK"
+									value="Envoyer"
+									type="submit"
+								>
+									Envoyer
+								</button>
+								<button name="subCancel" type="reset">
+									Effacer
+								</button>
+							</p>
+						</form>
+					</main>
+					<footer></footer>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<ul>
+				<li><a href="#">&copy;Dawan 2021</a></li>
+				<li><a href="#">Conditions Générale d'Utilisation</a></li>
+				<li><a href="#">Qui sommes-nous</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

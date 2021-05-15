@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Atelier 1</title>
+	</head>
+	<body>
+		<h1>Atelier 1</h1>
+		<nav>
+			<ul class="menu">
+				<li>
+					<span>Entrée</span>
+					<ul>
+						<li><a href="#">Salade</a></li>
+						<li><a href="#">Potage</a></li>
+						<li><a href="#">Cruditié</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>Plat</span>
+					<ul>
+						<li><a href="#">Poisson</a></li>
+						<li><a href="#">Viande</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>Dessert</span>
+					<ul>
+						<li><a href="#">Fruit</a></li>
+						<li><a href="#">Yahourt</a></li>
+						<li><a href="#">Gâteau</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			let openedSubMenu = null;
+
+			$(function () {
+				const $menu = $(".menu");
+				$menu.find("ul").hide();
+				$menu.find("span").click(function () {
+					const $subMenu = $(this).next();
+
+					if (openedSubMenu === this) {
+						$subMenu.hide();
+						const e = $.Event("menu.close", {
+							target: this,
+						});
+						$(this).trigger(e);
+						return;
+					}
+
+					$menu.find("ul").hide();
+					$subMenu.show();
+					const e = $.Event("menu.open", {
+						target: this,
+					});
+					$(this).trigger(e);
+				});
+
+				$menu.on("menu.open", function (e) {
+					openedSubMenu = e.target;
+				});
+
+				$menu.on("menu.close", function () {
+					openedSubMenu = null;
+				});
+			});
+		</script>
+	</body>
+</html>

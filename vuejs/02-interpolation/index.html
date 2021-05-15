@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vuejs</title>
+		<script src="../vue.global.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{message}}</h1>
+			<p>posté le: {{maDate}}</p>
+			<p>1 + 1 = {{1+1}}</p>
+		</div>
+
+		<script>
+			let app = Vue.createApp({
+				// Toutes les variables de notre application seront
+				data: function () {
+					const variables = {
+						message: "Hello World !",
+						maDate: new Date().toLocaleDateString(),
+					};
+					return variables;
+					// return {
+					// 	message: 'Hello World !',
+					// }
+				},
+			});
+			app.mount("#app");
+		</script>
+	</body>
+</html>

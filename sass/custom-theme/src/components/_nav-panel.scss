@@ -1,0 +1,12 @@
+.main-nav {
+	ul {
+		@include list-unstyled();
+		display: grid;
+		gap: 0.5rem;
+	}
+	a {
+		@include button-variant($gray-300, $gray-600);
+		@extend .btn;
+		display: block;
+	}
+}

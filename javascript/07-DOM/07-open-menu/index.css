@@ -1,0 +1,161 @@
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+header {
+	display: flex;
+	/* justify-content: flex-end; */
+	background-color: #1d1d1d;
+}
+
+.menu-btn {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	/* border: 1px solid white; */
+}
+
+.lines {
+	position: absolute;
+	width: 60px;
+	height: 42px;
+	cursor: pointer;
+	/* centrer notre élément */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn-burger-l1,
+.btn-burger-l2,
+.btn-burger-l3 {
+	width: 100%;
+	height: 6px;
+	border-radius: 5px;
+	background-color: white;
+	position: absolute;
+	transition: all 0.5s ease-in-out;
+}
+
+.btn-burger-l1 {
+	top: 0px;
+}
+.btn-burger-l2 {
+	top: 18px;
+}
+.btn-burger-l3 {
+	top: 36px;
+}
+
+.lines.opened .btn-burger-l2 {
+	transform: translate(-50px);
+	background-color: transparent;
+}
+
+.lines.opened .btn-burger-l1 {
+	/* positionne les élément au bon endroit */
+	top: 18px;
+	transform: rotate(135deg);
+}
+
+.lines.opened .btn-burger-l3 {
+	/* positionne les élément au bon endroit */
+	top: 18px;
+	transform: rotate(-135deg);
+}
+
+nav.menu-open {
+	display: flex;
+	top: 100px;
+	position: absolute;
+}
+
+.menu {
+	display: none;
+	background-color: #1d1d1d;
+	transition: width 200ms ease;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	/* align-items: center; */
+	height: 100%;
+}
+
+.navbar-item ul {
+	list-style-type: none;
+}
+
+.navbar-item {
+	width: 100%;
+}
+
+.navbar-item:last-child {
+	margin-top: auto;
+}
+
+.navbar-link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 5rem;
+	color: #b6b6b6;
+	text-decoration: none;
+	text-transform: capitalize;
+	/* Applique un filtre sur l'element pour ajuster le rendu */
+	filter: grayscale(100%) opacity(0.7);
+	transition: 600ms;
+}
+
+.navbar-link:hover {
+	filter: grayscale(0%) opacity(1);
+	background-color: #141418;
+	transition: 600ms;
+}
+
+i {
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+
+.icon {
+	color: #1b87a1;
+	font-size: 2rem;
+}
+
+.link-text {
+	margin-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+	}
+
+	.nav-link {
+		justify-content: center;
+	}
+
+	main {
+		margin: 0;
+	}
+}
+
+/* Big screens */
+@media only screen and (min-width: 600px) {
+	.navbar-nav {
+		top: 0;
+		width: 16rem;
+		height: 100vh;
+	}
+}

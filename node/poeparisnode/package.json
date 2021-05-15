@@ -1,0 +1,27 @@
+{
+  "name": "formation-node",
+  "version": "1.0.0",
+  "description": "Formation node avec les POE Front end Paris",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon express/index.js -e js,mjs,json,html"
+  },
+  "author": "ToNo",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "helmet": "^4.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mime-types": "^2.1.30",
+    "nunjucks": "^3.2.3",
+    "sequelize": "^6.6.2",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^5.0.2"
+  }
+}

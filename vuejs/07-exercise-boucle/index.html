@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="../vue.global.js"></script>
+		<script type="module" src="./app.js	" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>Liste des utilisateurs</h1>
+			<p v-if="utilisateurs.length === 0">Aucun utilisateurs trouvée</p>
+			<ul v-else>
+				<li v-for="utilisateur of utilisateurs">
+					{{utilisateur.nom}} EMAIL: {{utilisateur.email}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

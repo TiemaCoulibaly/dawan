@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://unpkg.com/vue@next"></script>
+		<script src="./app.js" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>Gestion de Films</h1>
+			<form v-on:submit.prevent='addMovie'>
+				<label>Titre</label>
+				<input type="text" name='title'>
+			<form>
+				<label>Description</label>
+				<input type="text" name='description'>
+			<form>
+				<label>Année de sorti</label>
+				<input type="text" name='year'>
+				<button>Submit</button>
+			</form>
+			<ul v-for='(movie, index) in movies'>
+				<li>{{movie.title}}</li>
+				<li>{{movie.description}}</li>
+				<li>{{movie.year}}</li>
+				<button @click='removeMovie(index)'>Delete</button>
+			</ul>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

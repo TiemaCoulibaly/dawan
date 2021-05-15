@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Exercices</title>
+		<script src="./index.js" defer></script>
+	</head>
+
+	<body>
+		<h1>Exercice: In Form</h1>
+
+		<h2>creation d'un paragraphe par l'utilisateur</h2>
+		<form onsubmit="handleClick(event)">
+			<fieldset>
+				<legend>Article</legend>
+				<label for="article">Article:</label>
+				<textarea
+					id="article"
+					name="article"
+					placeholder="Tapez le texte ici ... "
+				></textarea>
+
+				<label for="size">Taille du Texte:</label>
+				<input type="text" id="size" name="size" value="" />
+
+				<label for="color">Couleur du texte:</label>
+				<input type="color" id="color" name="color" />
+
+				<input type="submit" id="soumettre" value="Publier" />
+			</fieldset>
+		</form>
+		<div id="blog"></div>
+	</body>
+</html>

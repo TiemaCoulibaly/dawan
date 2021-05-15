@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <script src="../vue.global.js"></script> -->
+
+		<script src="https://unpkg.com/vue@next"></script>
+		<script type="module" src="./app.js	" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<button v-on:click="sayHello('bonjour')">Dire bonjour !</button>
+
+			<button v-on:click="sayHello('bye')">Dire Au revoir !</button>
+
+			<p>Prénom: {{ prenom }}</p>
+			<!-- @: syntaxe raccourcis de v-on:HTMLEvent -->
+			<button @click="changerPrenom">Changer</button>
+
+			<br />
+			<!-- Attention le $ est obligatoire -->
+			<input type="text" v-on:input="afficherValeur($event)" />
+			<!-- 
+                L'événement est passé automatiquement si on ne le precise pas 
+            -->
+			<input type="text" @input="afficherValeur" />
+
+			<!-- Liaison a double sens -->
+			<p>Prénom: {{ prenom }}</p>
+			<input type="text" :value="prenom" @input="editPrenom($event)" />
+
+			<input type="text" v-model="prenom" />
+		</div>
+	</body>
+</html>

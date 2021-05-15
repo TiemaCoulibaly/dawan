@@ -1,0 +1,3 @@
+@function set-luminance($color, $luminance: 50%) {
+  @return hsl(hue($color), 70%, $luminance);
+}

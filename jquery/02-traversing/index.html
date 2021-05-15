@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Traversing</title>
+	</head>
+	<body>
+		<h1>Traversing</h1>
+		<article>
+			<h1>L'API jQuery pour parcourir le DOM</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Suscipit, nihil consectetur cumque labore non harum dolore
+				aperiam excepturi! Enim, pariatur!
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+				Accusantium magni vitae dolorum quasi illo ab expedita cum nisi
+				veritatis sequi?
+			</p>
+		</article>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(function () {
+				//Permet de récupéré la collection de tous les éléments enfants de chaque éléments de ma collection de départ
+				$("article")
+					.children()
+
+					.parent() //recupéré la collection de tous les élements parent
+					.prev() // les prédécesseurs
+					.next() // les succeseurs
+					// possibilité d'ajouter un filtre supplémentaire avec la syntaxe des sélecteurs
+					.children("p") // ici par exemple, les <p> dans article
+					.parents() //récupere tous les ascendants (jusqu'à l'élément racine)
+					.find("*") // tous les descendants
+					.closest("article"); // remonte à l'article le plus proche parmi les ascendants
+			});
+		</script>
+	</body>
+</html>

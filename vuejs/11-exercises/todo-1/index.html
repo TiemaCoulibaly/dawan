@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://unpkg.com/vue@next"></script>
+		<script type="module" src="./app.js	" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>Todo List</h1>
+			<label>Tache</label>
+			<input type="text" v-model="tache" />
+			<label>Taille</label>
+			<input type="number" v-model="taille" />
+			<label>Etiquette</label>
+			<select v-model="etiquette">
+				<option value="urgent">Urgent</option>
+				<option value="important">Important</option>
+				<option value="pasimportant">Pas Important</option>
+			</select>
+
+			<button @click="addList(etiquette)">Submit</button>
+
+			<p
+				:style="{backgroundColor: back, fontSize: 'taille{px}'}"
+				v-for="tab in tabs"
+			>
+				{{tab}}
+			</p>
+		</div>
+	</body>
+</html>

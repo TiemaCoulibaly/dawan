@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formation webmaster HTML CSS RWD</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="./images/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link rel="stylesheet" href="./css/style.css" media="screen" />
+		<link rel="stylesheet" href="./css/print.css" media="print" />
+
+		<script src="./js/functions.js"></script>
+		<!-- fontawsome -->
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+		<!-- Bootstrap -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>Formation webmaster RWD - <small>HTML5 / CSS3</small></h1>
+		</header>
+		<nav>
+			<div class="toggle-menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<ul>
+				<li>
+					<a
+						href="./index.html"
+						title="Retourner à l'accueil du site"
+					>
+						<i class="fas fa-home"></i> Introduction
+					</a>
+				</li>
+				<li><a href="./article.html">Article</a></li>
+				<li><a href="./formulaire.html">Formulaire</a></li>
+				<li><a href="./css.html">Tricks Css</a></li>
+				<li><a href="./exocv.html">Exo cv</a></li>
+
+				<li><a href="./bootstrap.html">Bootstrap</a></li>
+			</ul>
+		</nav>
+		<main class="container">
+			<h2>Généralités HTML / CSS3</h2>
+			<section>
+				<article>
+					<header>
+						<h2>Problèmes CSS courants<i class="bi-wrench"></i></h2>
+					</header>
+					<main>
+						<p>
+							Le calcul par défaut des tailles en CSS est
+							content-box, il est conseillé de le passer en
+							border-box
+						</p>
+						<p>
+							Les tailles calculées : si vous voulez utiliser des
+							cadratin (em), il est plus sûr d'utiliser les
+							cadratins racine (rem) car il sont toujouts calculés
+							par rapport au cadratin racine du user stylesheet et
+							non pas le cadratin calculé du conteneur
+						</p>
+						<h3>Les polices de caractère</h3>
+						<p>
+							On utilisera les propriétés @font-face pour déclarer
+							en CSS une polices de caractère dont les fichiers
+							(eot, svg, ttf, woff, woff2) sont hébergés sur le
+							site pour ne pas forcer l'utilsateur à télécharger
+							et installer des fichiers.
+						</p>
+					</main>
+					<footer>
+						<a href="#">
+							<button>Voir plus</button>
+						</a>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h2>HTML - CSS sur le texte</h2>
+					</header>
+					<main>
+						<p>
+							Il existe quelques balises pour changer directement
+							l'affichage du texte en HTML. Un texte en
+							<b>gras</b>, qui n'a pas d'incidence sur le SEO, un
+							texte en <strong>gras</strong>
+							qui lui à de l'incidence sur le SEO.
+						</p>
+						<p>
+							Il en est de même pour l'italique :
+							<i>Italique à l'affichage</i>,
+							<em
+								>Italique afficher avec une emphase
+								sémantique</em
+							>
+						</p>
+						<p>
+							la balise font
+							<font color="#ff0000">texte</font> n'st plus
+							utilisée. Maintenant on va généralement utliser une
+							balise
+							<span class="rouge-gras"
+								>span associée à une classe</span
+							>.
+						</p>
+						<pre>
+Lorem ipsum dolor&lt;br /&gt; sit amet consectetur adipisicing elit. 
+Placeat sit maxime velit nostrum rem! Eos in alias vel a, corporis quas ea hic sunt beatae itaque totam, blanditiis exercitationem nostrum.
+                    </pre
+						>
+						<code>
+							Lorem ipsum, dolor sit &lt;br /&gt;amet consectetur
+							adipisicing elit. Necessitatibus libero perferendis
+							quaerat maiores quisquam natus? Sunt, molestiae iste
+							ipsam necessitatibus fuga sapiente, recusandae
+							doloribus consectetur odio similique rem, reiciendis
+							velit!
+						</code>
+						<p>H<sub>2</sub>SO<sub>4</sub><sup>2-</sup></p>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h2>D'autres balise de contenu texte</h2>
+					</header>
+					<main>
+						<blockquote>
+							La balise blockquote la balise de citation. Lorem
+							ipsum dolor sit amet consectetur adipisicing elit.
+							Recusandae nostrum, unde molestias error dolorem vel
+						</blockquote>
+						<p>
+							<q> Alea jacta est - "Jules César" </q>
+							<cite>
+								Lorem, ipsum dolor sit amet consectetur
+								adipisicing elit.
+							</cite>
+						</p>
+
+						<h3>Différencier les feuilles de style</h3>
+						<p>
+							Il est possible d'associer plusieurs feuilles de
+							style à une page html, et de différencier les
+							"media" (screen, print) qui les utiliseront.
+						</p>
+						<p>
+							Si une page utilise 90% du CSS de base mais
+							nécessite 10% de changement, comme l'affichage d'un
+							article unique, il est souvent créé un feuillet CSS
+							qui surchargera les style uniquement sur ce type de
+							page
+						</p>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h2>Inclure le responsive</h2>
+					</header>
+					<main>
+						<p>
+							Il est maintenant généralisé le fait d'écrire son
+							CSS responsive en mobile first, car la majorité des
+							personne allant sur internet le font à l'aide d'un
+							smartphone ou d'une tablette.
+						</p>
+						<p>
+							De plus il est plus simple de le faire de cette
+							manière, beaucoup moins de CSS à réécrire selon les
+							tailles d'affichage.
+						</p>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+			</section>
+			<section>
+				<article>
+					<header>
+						<h2>Images avec figure</h2>
+					</header>
+					<main>
+						<figure>
+							<img
+								src="./images/spider-verse-group-pic.jpg"
+								alt="Poster twitch synthwave James White"
+								title="Poster twitch synthwave James White"
+							/>
+							<figcaption>
+								Poster twitch synthwave James White
+							</figcaption>
+						</figure>
+						<p>
+							On peut intégrer directement des images à l'aide de
+							la balise img, mais en utlisant figure, on a à
+							disposition une légende et de quoi styliser la
+							conteneur de l'image et non l'image elle-même
+						</p>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h2>Images avec img</h2>
+					</header>
+					<main>
+						<img
+							src="./images/gijoe.jpg"
+							alt="Poster skeletor masters of the universe"
+							title="Poster skeletor masters of the universe"
+						/>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h2>Incrustation de vidéo</h2>
+					</header>
+					<main>
+						<video controls autoplay>
+							<source
+								src="./media/Big_Buck_Bunny_360_10s_1MB.mp4"
+								type="video/mp4"
+							/>
+							<source
+								src="./media/Big_Buck_Bunny_360_10s_1MB.webm"
+								type="video/webm"
+							/>
+							Désolé, votre navigateur ne supporte la source vidéo
+							proposée
+						</video>
+						<video controls poster="./images/outrun.jpg">
+							<source
+								src="./media/Fallout-4-Launch-Trailer.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<iframe
+							src="https://www.youtube.com/embed/xytORFECRIM"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+				<article>
+					<header>
+						<h2>L'audio en HTML</h2>
+					</header>
+					<main>
+						<figure>
+							<img src="./images/outrun.jpg" />
+							<figcaption>
+								<audio controls preload="auto">
+									<source
+										src="./media/diablo_town.mp3"
+										type="audio/mp3"
+									/>
+								</audio>
+							</figcaption>
+						</figure>
+					</main>
+					<footer>
+						<button>Voir plus</button>
+					</footer>
+				</article>
+			</section>
+			<!--
+        <div class="cem">
+            Bonjour
+            <div class="cem">
+                Nicolas
+            </div>
+        </div>
+        <div class="crem">
+            Bonjour
+            <div class="crem">
+                Nicolas
+            </div>
+        </div>
+        <div class="large">
+            <div class="left">Test</div>
+            <div class="left" style="width: 200px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Facere, iusto molestiae. Repellendus provident saepe 
+                cupiditate repudiandae aliquid fuga aliquam dolore amet, 
+                nobis unde voluptatem, cum eius ex. Possimus, recusandae 
+                placeat!
+            </div>
+            <div style="clear: both;"></div>
+            <div>
+                test
+            </div>
+        </div>
+        --></main>
+		<footer>
+			<ul>
+				<li><a href="#">&copy;Dawan 2021</a></li>
+				<li><a href="#">Conditions Générale d'Utilisation</a></li>
+				<li><a href="#">Qui sommes-nous</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+				<li><a href="#">lien</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+/******************
+ * Colors
+ ******************/
+
+$brand-color: #123;
+$brand-complementary: #fed;
+
+$severity: (
+  error: #a00,
+  warning: #a50,
+  success: #0a0,
+);
+
+$mq-breakpoints: (
+  x-small: 320px,
+  small: 740px,
+  medium: 980px,
+  large: 1300px,
+);

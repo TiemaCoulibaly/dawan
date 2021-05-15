@@ -1,0 +1,16 @@
+.btn {
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 10px 25px;
+	margin: 5px;
+}
+.green {
+	color: white;
+	background-color: rgb(101, 219, 101);
+}
+
+.red {
+	color: white;
+	background-color: rgb(185, 81, 81);
+}
