@@ -1,0 +1,67 @@
+workflow:
+    rules:
+        # le pipeline se déclenche dès qu'une règle est vérifiée
+        # OU logique
+        - if: $CI_PIPELINE_SOURCE == "push"
+        - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+image: python:rc-slim-buster
+
+variables:
+    CREATE_CACHE: "off"
+
+stages:
+    - init
+    - tests
+
+create_env:
+    stage: init
+    before_script:
+        # Sur un conteneur, sudo n'est pas présent
+        # par défaut l'utilisatuer est root
+        # Par défaut le cache apt est absent
+        # On utilisera apt-get au lieu d'apt
+        #- apt-get update
+        #- apt-get install -y python-venv
+        - python3 -m venv venv
+        - source venv/bin/activate
+    script:
+        - pip install -r requirements.txt
+        - pip install -r requirements-ci.txt
+    cache:
+        key: venv
+        paths:
+            - venv/
+        policy: push
+    rules:
+        - changes:
+              - requirements*.txt
+        - if: $CREATE_CACHE == "on"
+units:
+    stage: tests
+    before_script:
+        - source venv/bin/activate
+    script:
+        - >
+            coverage run 
+            --include="bank/*.py" 
+            --omit="**/__init__.py,**/tests/*.py" 
+            coverage_tests.py
+        - coverage report -m
+    cache:
+        key: venv
+        untracked: true
+        policy: pull
+    artifacts:
+        reports:
+            # les chemins utilisant des wildcards "*" ou "**"
+            junit: "reports/TEST-*.xml"
+            
+# test_env:
+#     stage: tests
+#     script:
+#         - test -e venv
+#     cache:
+#         key: venv
+#         untracked: true
+#         policy: pull
