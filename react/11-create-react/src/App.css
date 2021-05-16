@@ -1,0 +1,15 @@
+.navigation ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.navigation a {
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.navigation a.active{
+background-color: lightblue;
+color: white;
+}
