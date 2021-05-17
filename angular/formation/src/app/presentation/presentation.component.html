@@ -18,9 +18,9 @@
     Angular propose d'utiliser tous les attributs HTML sous la forme d'une
     directive Angular.
   </p>
-  <h4>Sans directive avec les moustaches </h4>
+  <h4>Sans directive avec les moustaches</h4>
   <img src="{{ path }}" alt="gijoe image" width="250" height="250" />
-  <h4>Avec une directive => [] </h4>
+  <h4>Avec une directive => []</h4>
   <img [src]="path" alt="gijoe image" width="250" height="250" />
 </section>
 
@@ -39,16 +39,43 @@
   </div>
 </section>
 
-
-
 <section>
   <h3>Two Way Data Binding</h3>
   <p>MVVM ou MWM (Modele Vue Modele)</p>
   <p>Banana in box => [()]</p>
 
-  <input type="text" placeholder="Entrez votre message"
-   [(ngModel)]="message" />
-   <button (click)="show()">Voir Message</button>
+  <input type="text" placeholder="Entrez votre message" />
+  <button (click)="show()">Voir Message</button>
 
   <p>{{ message }}</p>
+</section>
+<section>
+  <h3>Les variables de template</h3>
+  <p>
+    Les variables de template se déclare avec <b>#nom</b> sur une balise HTML.
+    (document.querySelector() ou document.getElementById())
+  </p>
+  <p>
+    detectChange() = responsable de mettre à jour les vues en Angular (ngModel
+    et event)
+  </p>
+  <input
+    type="text class"
+    class="form-control"
+    placeholder="Entrer votre message"
+    #input
+    (keyup.enter)="(false)"
+    (keyup.control.s)="(0)"
+  />
+  <p>input: {{ input }}</p>
+  <p>type: {{ input.type }}</p>
+  <p>class: {{ input.className }}</p>
+  <p>value: {{ input.value }}</p>
+</section>
+
+<section>
+  <h3>Directive ngFor</h3>
+  <ul>
+    <li *ngFor="let name of users; index as key">{{ key }}: {{ name }}</li>
+  </ul>
 </section>

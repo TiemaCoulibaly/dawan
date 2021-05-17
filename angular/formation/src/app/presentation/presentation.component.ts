@@ -15,6 +15,23 @@ export class PresentationComponent implements OnInit {
   /**Model */
   //string, number, boolean
   message: string = '';
+
+  users = [
+    'Willy',
+    'Tyfannia',
+    'Baptiste',
+    'Clément',
+    'Aymane',
+    'Denis',
+    'Sébastien',
+    'Avotra',
+    'Tiema',
+    'Burkhan',
+    'Mathieu',
+    'Medhi',
+    'Sébastien',
+    'Skander',
+  ];
   constructor() {}
 
   ngOnInit(): void {}
