@@ -1,0 +1,54 @@
+<header>
+  <h2>Présentation</h2>
+</header>
+<h3>Affichage</h3>
+<section>
+  <p>1+3 = {{ 1 + 3 }}</p>
+  <p>Bonjour {{ prenom }}</p>
+  <p>{{ product.name }} @ {{ product.price }}&euro;</p>
+
+  <p>{{ html }}</p>
+  <!--xss: not safe content -->
+  <p [innerHTML]="html"></p>
+  <!--xss: safe content -->
+
+  <p>
+    Les directives s'utilisent avec des [] ou sous une forme identique à un
+    attribut HTML.<br />
+    Angular propose d'utiliser tous les attributs HTML sous la forme d'une
+    directive Angular.
+  </p>
+  <h4>Sans directive avec les moustaches </h4>
+  <img src="{{ path }}" alt="gijoe image" width="250" height="250" />
+  <h4>Avec une directive => [] </h4>
+  <img [src]="path" alt="gijoe image" width="250" height="250" />
+</section>
+
+<section>
+  <h3>Les Evenements</h3>
+
+  <div>
+    <button class="btn btn-outline-primary" (click)="clicked()">
+      Cliquez ici
+    </button>
+  </div>
+  <div>
+    <p>
+      <a href="#" (click)="confirmation($event)"> Faire une confirmation</a>
+    </p>
+  </div>
+</section>
+
+
+
+<section>
+  <h3>Two Way Data Binding</h3>
+  <p>MVVM ou MWM (Modele Vue Modele)</p>
+  <p>Banana in box => [()]</p>
+
+  <input type="text" placeholder="Entrez votre message"
+   [(ngModel)]="message" />
+   <button (click)="show()">Voir Message</button>
+
+  <p>{{ message }}</p>
+</section>
