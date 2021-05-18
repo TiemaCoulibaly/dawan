@@ -7,10 +7,10 @@
   <p>Bonjour {{ prenom }}</p>
   <p>{{ product.name }} @ {{ product.price }}&euro;</p>
 
-  <p>{{ html }}</p>
   <!--xss: not safe content -->
-  <p [innerHTML]="html"></p>
+  <p>{{ html }}</p>
   <!--xss: safe content -->
+  <p [innerHTML]="html"></p>
 
   <p>
     Les directives s'utilisent avec des [] ou sous une forme identique à un
