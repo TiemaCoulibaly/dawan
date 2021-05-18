@@ -1,0 +1,61 @@
+<header>
+  <h2>Les Directives</h2>
+</header>
+<ul>
+  <li>
+    Les directives structurelles : Elles ont pour but de modifier le DOM en
+    ajoutant, enlevant ou replaçant un élément du DOM.
+  </li>
+
+  <li>
+    Les directives d'attributs : Elles ont pour but de modifier l'apparence ou
+    le comportement d'un élément.
+  </li>
+</ul>
+
+<p>
+  Un composant Angular, est une directive particulière (1 fichier .ts (logique)
+  et 1 fichier .html (vue))
+</p>
+
+<article>
+  <h3>ngIf</h3>
+  <button class="btn btn-outline-primary" (click)="show = !show">
+    {{ show ? "Masquer" : "Afficher" }}
+  </button>
+  <p *ngIf="show">
+    Si SHOW EST TRUE Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Minus similique soluta sapiente facilis quis. Dolores voluptates animi
+    voluptatibus consequatur architecto!
+  </p>
+  <p *ngIf="show; else elseBlock">
+    SI SHOW EST TRUE Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Minus similique soluta sapiente facilis quis. Dolores voluptates animi
+    voluptatibus consequatur architecto!
+  </p>
+  <ng-template #elseBlock>
+    <p>SI SHOW EST FALSE => ELSE BLOCK Lorem ipsum [...] dolor sit amet.</p>
+  </ng-template>
+
+  <!-- Faire appel a la fonction et récupéré la valeur dans une variable et l'afficher -->
+  <p *ngIf="getMessage(); let message">{{ message }}</p>
+  <p *ngIf="getMessage() as message">{{ message }}</p>
+</article>
+<article>
+  <h3>ngForOf</h3>
+  <!-- Différente chose que l'on peut checker dans le ngForOf -->
+  <!-- odd / even: boolean -->
+  <!-- first / last : boolean-->
+  <ul>
+    <li
+      *ngFor="
+        let letter of ['a', 'b', 'c'];
+        index as key;
+        even as isEven;
+        last as isLast
+      "
+    >
+      {{ key }}: {{ letter }} (Paire: {{ isEven }}) (Dernier: {{ isLast }})
+    </li>
+  </ul>
+</article>

@@ -8,6 +8,7 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { TodoComponent } from './components/todo/todo.component';
 import { HomeComponent } from './components/home/home.component';
 import { FiltreComponent } from './components/filtre/filtre.component';
+import { DirectiveComponent } from './components/directive/directive.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FiltreComponent } from './components/filtre/filtre.component';
     TodoComponent,
     HomeComponent,
     FiltreComponent,
+    DirectiveComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
