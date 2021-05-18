@@ -10,6 +10,8 @@ export class DirectiveComponent implements OnInit {
   mode = '';
 
   payment = 'pending';
+  progress = 10;
+  bgcolor = 'red';
   constructor() {}
 
   ngOnInit(): void {}

@@ -117,3 +117,44 @@
     >
   </p>
 </article>
+<article>
+  <h3>ngStyle</h3>
+  <div class="btn-group btn-group-sm my-3">
+    <button
+      class="btn btn-outline-primary"
+      (click)="progress = 10; bgcolor = 'red'"
+    >
+      10%
+    </button>
+    <button
+      class="btn btn-outline-primary"
+      (click)="progress = 33.33; bgcolor = 'orange'"
+    >
+      33%
+    </button>
+    <button
+      class="btn btn-outline-primary"
+      (click)="progress = 75; bgcolor = 'limegreen'"
+    >
+      75%
+    </button>
+  </div>
+
+  <div class="progress">
+    <div
+      class="progress-bar"
+      [ngStyle]="{ width: progress + '%', backgroundColor: bgcolor }"
+    ></div>
+  </div>
+  <div class="progress mt-3">
+    <!-- [attr] => setAttribute(key. value) -->
+    <div
+      class="progress-bar"
+      [style.width]="progress + '%'"
+      role="progressbar"
+      [attr.aria-valuenow]="progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+  </div>
+</article>
