@@ -5,6 +5,8 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { TodoComponent } from './components/todo/todo.component';
 import { FiltreComponent } from './components/filtre/filtre.component';
 import { DirectiveComponent } from './components/directive/directive.component';
+import { LocaleComponent } from './components/locale/locale.component';
+import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'todo', component: TodoComponent },
   { path: 'filtre', component: FiltreComponent },
   { path: 'directive', component: DirectiveComponent },
+  { path: 'locale', component: LocaleComponent },
+  { path: 'custom-pipe', component: CustomPipeComponent },
 ];
 
 @NgModule({

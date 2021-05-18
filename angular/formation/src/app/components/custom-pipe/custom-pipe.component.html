@@ -1,0 +1,15 @@
+<header>
+  <h2>Les filtres personnalisés</h2>
+</header>
+
+<div class="btn-group my-3">
+  <button class="btn btn-outline-primary" (click)="order = 'asc'">
+    Croissant
+  </button>
+  <button class="btn btn-outline-primary" (click)="order = 'desc'">
+    Décroissant
+  </button>
+</div>
+<ul>
+  <li *ngFor="let name of users | sort: order">{{ name }}</li>
+</ul>
