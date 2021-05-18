@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { HomeComponent } from './components/home/home.component';
+import { FiltreComponent } from './components/filtre/filtre.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
     PresentationComponent,
     TodoComponent,
     HomeComponent,
+    FiltreComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
