@@ -59,3 +59,61 @@
     </li>
   </ul>
 </article>
+<article>
+  <h3>ngSwitch</h3>
+  <div class="btn-group btn-group-sm my-3">
+    <button class="btn btn-outline-primary" (click)="mode = 'vertical'">
+      Vertical
+    </button>
+    <button class="btn btn-outline-primary" (click)="mode = 'horizontal'">
+      Horizontal
+    </button>
+    <button class="btn btn-outline-primary" (click)="mode = ''">Aucun</button>
+  </div>
+  <div [ngSwitch]="mode">
+    <ul class="list-unstyled" *ngSwitchCase="'vertical'">
+      <li>Element 1</li>
+      <li>Element 2</li>
+      <li>Element 3</li>
+    </ul>
+    <ul class="list-inline" *ngSwitchCase="'horizontal'">
+      <li class="list-inline-item">Element 1</li>
+      <li class="list-inline-item">Element 2</li>
+      <li class="list-inline-item">Element 3</li>
+    </ul>
+    <p class="text-primay" *ngSwitchDefault>Choisissez un affichage</p>
+  </div>
+</article>
+<hr />
+<article>
+  <h3>ngClass</h3>
+  <p [ngClass]="'text-info font-monospace'">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, eveniet?
+  </p>
+  <p class="small" [ngClass]="['text-success', 'text-capitalize']">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, dolor.
+  </p>
+  <div class="btn-group btn-group-sm my-3">
+    <button class="btn btn-outline-primary" (click)="payment = 'done'">
+      Validé
+    </button>
+    <button class="btn btn-outline-primary" (click)="payment = 'pending'">
+      En attente
+    </button>
+    <button class="btn btn-outline-primary" (click)="payment = 'cancel'">
+      Refusé
+    </button>
+  </div>
+  <p>
+    Etat du paiement:
+    <span
+      class="badge"
+      [ngClass]="{
+        'bg-warning': payment == 'pending',
+        'bg-danger': payment == 'cancel',
+        'bg-success': payment == 'done'
+      }"
+      >{{ payment | titlecase }}</span
+    >
+  </p>
+</article>
