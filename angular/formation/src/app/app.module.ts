@@ -21,6 +21,8 @@ import { DirectiveComponent } from './components/directive/directive.component';
 import { LocaleComponent } from './components/locale/locale.component';
 import { SortPipe } from './pipes/sort/sort.pipe';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
     LocaleComponent,
     SortPipe,
     CustomPipeComponent,
+    FormulaireComponent,
+    SignupComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
