@@ -32,12 +32,17 @@ export class SignupComponent implements OnInit {
     this.confirm = new FormControl(null, [Validators.required]);
     this.terms = new FormControl(false, [Validators.requiredTrue]);
 
-    this.form = this.fb.group({
-      email: this.email,
-      password: this.password,
-      confirm: this.confirm,
-      terms: this.terms,
-    });
+    this.form = this.fb.group(
+      {
+        email: this.email,
+        password: this.password,
+        confirm: this.confirm,
+        terms: this.terms,
+      },
+      {
+        validators: CustomValidators.matchPassword(),
+      }
+    );
   }
 
   public validateEmail(): string | null {
@@ -63,6 +68,9 @@ export class SignupComponent implements OnInit {
     if (this.confirm.touched) {
       if (this.confirm.getError('required')) {
         return `Le confirmation est obligatoire`;
+      }
+      if (this.form.getError('match_password')) {
+        return `La confirmation et le mot de passe ne correspondent pas`;
       }
     }
     return null;

@@ -12,4 +12,15 @@ export class CustomValidators {
       return null;
     };
   }
+
+  public static matchPassword(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      //
+
+      if (control.get('password')!.value != control.get('confirm')!.value) {
+        return { match_password: 'invalid' };
+      }
+      return null;
+    };
+  }
 }
