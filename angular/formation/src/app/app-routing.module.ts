@@ -9,6 +9,7 @@ import { LocaleComponent } from './components/locale/locale.component';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ServiceComponent } from './components/service/service.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'custom-pipe', component: CustomPipeComponent },
   { path: 'formulaire', component: FormulaireComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'service', component: ServiceComponent },
 ];
 
 @NgModule({
