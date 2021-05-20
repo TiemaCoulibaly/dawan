@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-custom-pipe',
@@ -24,7 +25,9 @@ export class CustomPipeComponent implements OnInit {
   ];
   test = ['a', 'b', 'c'];
   order = 'asc';
-  constructor() {}
+  constructor(private title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('custom-pipe');
+  }
 }

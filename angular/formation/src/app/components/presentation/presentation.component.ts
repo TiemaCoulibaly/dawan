@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-presentation',
@@ -32,9 +33,10 @@ export class PresentationComponent implements OnInit {
     'Sébastien',
     'Skander',
   ];
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(private title: Title) {}
+  ngOnInit(): void {
+    this.title.setTitle('Présentation');
+  }
 
   //mettre void lorsque la fonction ne renvoi pas de valeur
   public clicked(): void {

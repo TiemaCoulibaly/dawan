@@ -1,3 +1,16 @@
 <header>
   <h2>Service</h2>
 </header>
+<p class="lead">Casear Cipher</p>
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Entrer votre message secret"
+    [(ngModel)]="message"
+  />
+
+  <button class="btn btn-outline-secondary" (click)="crypt()">Crypter</button>
+</div>
+
+<p>Résultat: {{ crypted }}</p>

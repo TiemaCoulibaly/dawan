@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-directive',
@@ -12,9 +13,11 @@ export class DirectiveComponent implements OnInit {
   payment = 'pending';
   progress = 10;
   bgcolor = 'red';
-  constructor() {}
+  constructor(private title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle('les directives');
+  }
 
   // ligne 40 directive.html
   public getMessage(): string | null {

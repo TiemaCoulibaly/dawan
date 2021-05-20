@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { CustomValidators } from 'src/app/validators/custom-validators';
 
 @Component({
@@ -20,9 +21,10 @@ export class SignupComponent implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private title: Title) {}
 
   ngOnInit(): void {
+    this.title.setTitle('Inscription');
     //FormControl(default value, options or [SyncValidators])
     this.email = new FormControl(null, [
       Validators.required,
