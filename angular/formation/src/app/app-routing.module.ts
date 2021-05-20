@@ -10,6 +10,8 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ServiceComponent } from './components/service/service.component';
+import { Observable } from 'rxjs';
+import { ObservableComponent } from './components/observable/observable.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'formulaire', component: FormulaireComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'service', component: ServiceComponent },
+  { path: 'observable', component: ObservableComponent },
 ];
 
 @NgModule({

@@ -24,6 +24,7 @@ import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.compon
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ServiceComponent } from './components/service/service.component';
+import { ObservableComponent } from './components/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ServiceComponent } from './components/service/service.component';
     FormulaireComponent,
     SignupComponent,
     ServiceComponent,
+    ObservableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [
