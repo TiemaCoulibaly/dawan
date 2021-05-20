@@ -1,0 +1,31 @@
+<header>
+  <h2>Les parametres d'URL</h2>
+</header>
+<ul class="nav">
+  <li class="nav-item">
+    <a href="" class="nav-link" routerLink="/parameters/john">John</a>
+  </li>
+  <li class="nav-item">
+    <a href="" class="nav-link" routerLink="/parameters/jane">Jane</a>
+  </li>
+</ul>
+<p class="alert alert-info">{{ (data$ | async)?.message }}</p>
+
+<article *ngIf="name">
+  <button class="btn btn-outline-primary float-end" (click)="goback()">
+    Retour
+  </button>
+  <h3>Information</h3>
+  <p>Nom: {{ name | titlecase }}</p>
+  <p>Page: {{ page }}</p>
+
+  <footer>
+    <a [routerLink]="['/parameters', name]" [queryParams]="{ page: 1 }"
+      >Page 1</a
+    >
+    -
+    <a [routerLink]="['/parameters', name]" [queryParams]="{ page: 2 }"
+      >Page 2</a
+    >
+  </footer>
+</article>

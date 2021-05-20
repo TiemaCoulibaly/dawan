@@ -12,6 +12,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ServiceComponent } from './components/service/service.component';
 import { Observable } from 'rxjs';
 import { ObservableComponent } from './components/observable/observable.component';
+import { ParametersComponent } from './components/parameters/parameters.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,17 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'service', component: ServiceComponent },
   { path: 'observable', component: ObservableComponent },
+  {
+    path: 'parameters',
+    component: ParametersComponent,
+    data: { message: 'hello world' },
+  },
+  {
+    path: 'parameters/:name',
+    component: ParametersComponent,
+    data: { message: 'hello world' },
+    canActivate: ['SecureRoute'],
+  },
 ];
 
 @NgModule({

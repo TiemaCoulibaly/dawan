@@ -25,6 +25,7 @@ import { FormulaireComponent } from './components/formulaire/formulaire.componen
 import { SignupComponent } from './components/signup/signup.component';
 import { ServiceComponent } from './components/service/service.component';
 import { ObservableComponent } from './components/observable/observable.component';
+import { ParametersComponent } from './components/parameters/parameters.component';
 
 @NgModule({
   declarations: [
@@ -41,11 +42,13 @@ import { ObservableComponent } from './components/observable/observable.componen
     SignupComponent,
     ServiceComponent,
     ObservableComponent,
+    ParametersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }, // DEFAULT_CURRENCY_CODE Angular 9
+    { provide: 'SecureRoute', useValue: () => true },
   ],
   bootstrap: [AppComponent],
 })
