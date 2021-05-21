@@ -1,0 +1,20 @@
+<header>
+  <h2>Bonus <small>Pipe Async</small></h2>
+</header>
+
+<div *ngIf="user$ | async as user; else loading">
+  <p class="h4">{{ user.firstName }} {{ user.lastName }}</p>
+  <dl class="row">
+    <dt class="col-2">Age:</dt>
+    <dd class="col-10">{{ user.age }} ans</dd>
+
+    <dt class="col-2">Home World:</dt>
+    <dd class="col-10">{{ user.homeWorld }}</dd>
+  </dl>
+</div>
+<ng-template #loading>
+  Loading User Data ...
+  <div class="spinner-border spinner-border-sm text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</ng-template>

@@ -13,6 +13,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { Observable } from 'rxjs';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ParametersComponent } from './components/parameters/parameters.component';
+import { BonusComponent } from './components/bonus/bonus.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
     data: { message: 'hello world' },
     canActivate: ['SecureRoute'],
   },
+  { path: 'bonus', component: BonusComponent },
 ];
 
 @NgModule({
