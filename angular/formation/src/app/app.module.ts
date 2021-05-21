@@ -27,6 +27,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ParametersComponent } from './components/parameters/parameters.component';
 import { BonusComponent } from './components/bonus/bonus.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { BonusComponent } from './components/bonus/bonus.component';
     ObservableComponent,
     ParametersComponent,
     BonusComponent,
+    SignInComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [

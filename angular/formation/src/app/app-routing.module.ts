@@ -14,6 +14,8 @@ import { Observable } from 'rxjs';
 import { ObservableComponent } from './components/observable/observable.component';
 import { ParametersComponent } from './components/parameters/parameters.component';
 import { BonusComponent } from './components/bonus/bonus.component';
+import { SecureRouteGuard } from './guards/secureRoute/secure-route.guard';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,9 +38,10 @@ const routes: Routes = [
     path: 'parameters/:name',
     component: ParametersComponent,
     data: { message: 'hello world' },
-    canActivate: ['SecureRoute'],
+    canActivate: [SecureRouteGuard],
   },
   { path: 'bonus', component: BonusComponent },
+  { path: 'signin', component: SignInComponent },
 ];
 
 @NgModule({
