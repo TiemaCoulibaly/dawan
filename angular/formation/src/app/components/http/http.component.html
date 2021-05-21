@@ -17,14 +17,18 @@
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
+      <th>Adresse</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let user of users$ | async">
       <td class="table-danger">{{ user.id }}</td>
       <td class="table-success">{{ user.name }}</td>
-      <td class="table-warning">{{ user.email }}</td>
+      <td class="table-primary">{{ user.email }}</td>
       <td class="table-secondary">{{ user.phone }}</td>
+      <td class="table-warning">
+        <app-address [address]="user.address"></app-address>
+      </td>
     </tr>
   </tbody>
 </table>

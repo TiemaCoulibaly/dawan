@@ -31,6 +31,7 @@ import { ParametersComponent } from './components/parameters/parameters.componen
 import { BonusComponent } from './components/bonus/bonus.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { HttpComponent } from './components/http/http.component';
+import { AddressComponent } from './components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { HttpComponent } from './components/http/http.component';
     BonusComponent,
     SignInComponent,
     HttpComponent,
+    AddressComponent,
   ],
   imports: [
     BrowserModule,
