@@ -1,0 +1,30 @@
+<header>
+  <h2>Http Client</h2>
+</header>
+<p class="small">
+  Penser à importer le module <strong>HttpClientModule</strong> dans le
+  <em>AppModule</em>
+</p>
+
+<button class="btn btn-outline-primary" (click)="getUsers()">
+  Afficher les utilisateurs
+</button>
+
+<table class="table mt-3">
+  <thead>
+    <tr class="table-dark">
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async">
+      <td class="table-danger">{{ user.id }}</td>
+      <td class="table-success">{{ user.name }}</td>
+      <td class="table-warning">{{ user.email }}</td>
+      <td class="table-secondary">{{ user.phone }}</td>
+    </tr>
+  </tbody>
+</table>

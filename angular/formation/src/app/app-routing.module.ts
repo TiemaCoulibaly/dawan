@@ -16,6 +16,7 @@ import { ParametersComponent } from './components/parameters/parameters.componen
 import { BonusComponent } from './components/bonus/bonus.component';
 import { SecureRouteGuard } from './guards/secureRoute/secure-route.guard';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { HttpComponent } from './components/http/http.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
   },
   { path: 'bonus', component: BonusComponent },
   { path: 'signin', component: SignInComponent },
+  { path: 'http', component: HttpComponent },
 ];
 
 @NgModule({

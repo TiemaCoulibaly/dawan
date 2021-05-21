@@ -7,6 +7,8 @@ import fr from '@angular/common/locales/fr';
 import de from '@angular/common/locales/de';
 import ja from '@angular/common/locales/ja';
 
+import { HttpClientModule } from '@angular/common/http';
+
 registerLocaleData(fr);
 registerLocaleData(de);
 registerLocaleData(ja);
@@ -28,6 +30,7 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { ParametersComponent } from './components/parameters/parameters.component';
 import { BonusComponent } from './components/bonus/bonus.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { HttpComponent } from './components/http/http.component';
 
 @NgModule({
   declarations: [
@@ -47,8 +50,15 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
     ParametersComponent,
     BonusComponent,
     SignInComponent,
+    HttpComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }, // DEFAULT_CURRENCY_CODE Angular 9
