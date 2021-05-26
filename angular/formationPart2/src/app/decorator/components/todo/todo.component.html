@@ -1,0 +1,32 @@
+<h1>My Todo List</h1>
+
+<div class="container">
+  <input
+    class="form-control"
+    type="text"
+    placeholder="ex: Acheter du pain.."
+    [(ngModel)]="newTodo"
+    (keyup.enter)="addTodo()"
+    #inputElement
+  />
+
+  <button class="btn btn-lg btn-secondary mt-3" (click)="addTodo()">Add</button>
+
+  <table class="table table-striped mt-3">
+    <thead class="mt-3">
+      <code><em>Cliquer sur un élément pour le supprimer </em></code>
+      <tr class="table-light">
+        <th>My todos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        (click)="deleteTodo(key)"
+        *ngFor="let todo of lists; index as key"
+        class="table-info"
+      >
+        <td class="table-warning">{{ todo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
