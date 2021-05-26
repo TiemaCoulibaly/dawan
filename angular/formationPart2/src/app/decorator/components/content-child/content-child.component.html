@@ -3,7 +3,7 @@
 </header>
 <p>
   Pour faire afficher le contenu fourni dans la directive d'un composant, on
-  utilise la directive <code>&lt;ng-content-child>&lt;/ng-content></code>
+  utilise la directive <code>&lt;ng-content>&lt;/ng-content></code>
 </p>
 
 <p>Exercise:</p>
@@ -11,3 +11,13 @@
   Créer un composant Angular qui affiche une alert de bootstrap <br />
   Rendre parametrable la class css qui affichera la couleur
 </p>
+<app-alert>
+  <h4>Hello Buddy !</h4>
+  <hr />
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, excepturi.
+  </p>
+</app-alert>
+<app-alert type="danger">Hello Today</app-alert>
+<app-alert type="warning">Hello Now</app-alert>
+<app-alert type="success">Hello Tomorrow</app-alert>
