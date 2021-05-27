@@ -1,21 +1,47 @@
-<nav class="navbar navbar-light" style="background-color: #e9ff70">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/">Accueil</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/decorator">Les Décorateurs</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/profile">Mon Compte</a>
-    </li>
-  </ul>
-</nav>
-<main>
-  <router-outlet></router-outlet>
-</main>
-<footer>
-  <hr />
+<div>
+  <nav class="navbar navbar-light" style="background-color: #e9ff70">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/decorator">Les Décorateurs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/product">Mes Produits</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile">Mon Compte</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <footer>
+    <hr />
 
-  <p class="small text-center">Mai 2021 - Dawan FOAD - POE FrontEnd - Paris</p>
-</footer>
+    <p class="small text-center">
+      Mai 2021 - Dawan FOAD - POE FrontEnd - Paris
+    </p>
+  </footer>
+</div>
+
+<div
+  *ngIf="loading"
+  class="
+    position-absolute
+    w-100
+    h-100
+    d-flex
+    justify-content-center
+    align-items-center
+  "
+  style="background-color: rgba(191, 190, 190, 0.5); top: 0; left: 0"
+>
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
