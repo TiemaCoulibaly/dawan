@@ -22,6 +22,7 @@ const routes: Routes = [
       import('./product/product.module').then((m) => m.ProductModule),
     data: { preload: true },
   },
+  { path: 'interceptor', loadChildren: () => import('./interceptor/interceptor.module').then(m => m.InterceptorModule) },
 ];
 
 @NgModule({

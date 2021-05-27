@@ -1,0 +1,26 @@
+<header>
+  <h1>Les Intercepteurs</h1>
+</header>
+
+<button class="btn btn-outline-primary my-3" (click)="getUsers()">
+  Afficher les utilisateurs
+</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async">
+      <td class="table-warning">{{ user.id }}</td>
+      <td class="table-info">{{ user.name }}</td>
+      <td class="table-dark">{{ user.email }}</td>
+      <td class="table-danger">{{ user.phone }}</td>
+    </tr>
+  </tbody>
+</table>

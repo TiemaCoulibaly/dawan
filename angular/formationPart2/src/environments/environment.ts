@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
   api: 'http://localhost:3200',
+  externe: {
+    api: 'http://jsonplaceholder.typicode.com',
+  },
 };
 
 /*
