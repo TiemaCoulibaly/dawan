@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InterceptorComponent } from './interceptor.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('InterceptorComponent', () => {
   let component: InterceptorComponent;
@@ -8,9 +9,9 @@ describe('InterceptorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InterceptorComponent ]
-    })
-    .compileComponents();
+      declarations: [InterceptorComponent],
+      imports: [HttpClientTestingModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
