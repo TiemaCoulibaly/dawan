@@ -28,10 +28,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      enableTracing: false,
-      // preloadingStrategy: PreloadAllModules,
-      preloadingStrategy: CustomPreloadStrategyService,
-    }),
+    enableTracing: false,
+    // preloadingStrategy: PreloadAllModules,
+    preloadingStrategy: CustomPreloadStrategyService,
+    initialNavigation: 'enabled'
+}),
   ],
   exports: [RouterModule],
 })
